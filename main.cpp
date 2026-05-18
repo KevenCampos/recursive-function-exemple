@@ -10,11 +10,13 @@ using namespace std;
 double CalculateFineAmount(int daysLate, float fineAmount, float taxPerDayPercent)
 {
     /*
+        MARIA
         Vamos verificar se o dia atual é menor ou igual a 0, 
     */
     if (daysLate <= 0)
     {
         /*
+            MARIA
             Quando o código chegar aqui, significa que já somou o juros de todos os dias
             então vamos retornar o valor final já arredondado até a segunda casa decimal
         */
@@ -24,6 +26,8 @@ double CalculateFineAmount(int daysLate, float fineAmount, float taxPerDayPercen
     else
     {
         /*
+            ELTON
+
             Vamos remover um dia dos dias de atraso e vamos modificar a variavel "fineAmount",
             acrescentado o juros do dia atual. Após isso, com os novos valores de "fineAmount" e "daysLate"
             vamos chamar essa mesma função novamente, para repetir o mesmo ciclo mas para o proximo dia.
@@ -48,6 +52,7 @@ int main() {
     system("cls");
 
     /*
+        Luana
         Realiza as perguntas ao usuário e atribui os respectivos valores as variaveis
     */
     cout << "Qual valor da multa ? ( R$ )\n";
@@ -60,6 +65,7 @@ int main() {
     cin >> taxPerDayPercent;
 
     /*
+        MAISA
         Chama a função recursiva e exibe o resutado como resposta para o usuário
     */
     double amountWithFine = CalculateFineAmount(daysLate, fineAmount, taxPerDayPercent);
