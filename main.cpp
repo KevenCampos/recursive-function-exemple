@@ -1,3 +1,4 @@
+// KEVEN 
 #include <iostream>           // Para usar a lib std
 #include <cmath>              // Para usar a função round (arredondar numero)
 
@@ -52,7 +53,7 @@ int main() {
     system("cls");
 
     /*
-        Luana
+        Maisa
         Realiza as perguntas ao usuário e atribui os respectivos valores as variaveis
     */
     cout << "Qual valor da multa ? ( R$ )\n";
@@ -65,7 +66,7 @@ int main() {
     cin >> taxPerDayPercent;
 
     /*
-        MAISA
+        Luana
         Chama a função recursiva e exibe o resutado como resposta para o usuário
     */
     double amountWithFine = CalculateFineAmount(daysLate, fineAmount, taxPerDayPercent);
