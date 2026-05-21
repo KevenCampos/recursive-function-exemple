@@ -11,20 +11,10 @@ using namespace std;
 double CalculateFineAmount(int daysLate, float fineAmount, float taxPerDayPercent)
 {
     /*
-        MARIA
+        ELTON
         Vamos verificar se o dia atual é menor ou igual a 0, 
     */
-    if (daysLate <= 0)
-    {
-        /*
-            MARIA
-            Quando o código chegar aqui, significa que já somou o juros de todos os dias
-            então vamos retornar o valor final já arredondado até a segunda casa decimal
-        */
-        double roundedAmount = round(fineAmount * 100) / 100;
-        return roundedAmount;
-    }
-    else
+    if (daysLate >= 0)
     {
         /*
             ELTON
@@ -36,6 +26,16 @@ double CalculateFineAmount(int daysLate, float fineAmount, float taxPerDayPercen
         daysLate = daysLate - 1;
         fineAmount = fineAmount + ((taxPerDayPercent/100) * fineAmount);
         return CalculateFineAmount(daysLate, fineAmount, taxPerDayPercent);
+    }
+    else
+    {
+        /*
+            MARIA
+            Quando o código chegar aqui, significa que já somou o juros de todos os dias
+            então vamos retornar o valor final já arredondado até a segunda casa decimal
+        */
+        double roundedAmount = round(fineAmount * 100) / 100;
+        return roundedAmount;
     }
 }
 
