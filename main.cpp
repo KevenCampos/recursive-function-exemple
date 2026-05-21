@@ -14,7 +14,7 @@ double CalculateFineAmount(int daysLate, float fineAmount, float taxPerDayPercen
         ELTON
         Vamos verificar se o dia atual é menor ou igual a 0, 
     */
-    if (daysLate >= 0)
+    if (daysLate > 0)
     {
         /*
             ELTON
