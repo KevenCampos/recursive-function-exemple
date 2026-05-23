@@ -70,7 +70,7 @@ int main() {
         Chama a função recursiva e exibe o resutado como resposta para o usuário
     */
     double amountWithFine = CalculateFineAmount(daysLate, fineAmount, taxPerDayPercent);
-    cout << "\nValor da multa com a taxa de atraso: R$" << round(amountWithFine * 100) / 100 <<  "\n";
+    cout << "\nValor da multa com a taxa de atraso: R$" << amountWithFine <<  "\n";
 
     /*
         Encerra o código retornano 0 para indicar que o programa executou sem erro.
